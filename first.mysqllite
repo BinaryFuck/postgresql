@@ -1,0 +1,42 @@
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+INSERT INTO friends(id, name, birthday)
+VALUES (1, 'Faizan-ul-durani', '1998-05-30');
+
+INSERT INTO friends (id, name, birthday)
+VALUES (2, 'Muzamil Hussain', '1998-05-30');
+
+INSERT INTO friends (id, name, birthday)
+VALUES (3, 'Sohaib Niazi', '1995-05-30');
+
+
+UPDATE friends
+SET name = 'Faizan-ul-islam'
+WHERE id = 1;
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+UPDATE friends
+SET email = 'faizanulislam@gmail.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'muzihussain@gmail.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'murshadsaien@gmail.com'
+WHERE id = 3;
+
+INSERT INTO friends (id, name, birthday, email)
+VALUES (4, 'fictional', '1888-03-23', 'fictionalstrart@gmail.com');
+
+DELETE FROM friends
+WHERE name = 'fictional';
+
+SELECT * FROM friends;
